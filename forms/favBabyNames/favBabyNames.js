@@ -14,4 +14,3 @@ drpFavs.onclick = function(s) {
         imgRandom.show()
     } 
 }
-}

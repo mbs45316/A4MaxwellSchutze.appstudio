@@ -1,7 +1,5 @@
 rbtnDelete.onchange = function() {
-        if (typeof(s) == "object") {
-            return
-        } else {
+        
             let userChoice = $("input[name=rbtnDelete]:checked").prop("value")
             let found = false
 
@@ -12,11 +10,12 @@ rbtnDelete.onchange = function() {
                 results = JSON.parse(req.responseText)
 
             for (i = 0; i < results.length; i++) {
-                if (userChoice == results[i][1]) {
+                if (userChoice == results[i]) {
                     found = true
                     break
                 }
             }
+            console.log(found)
             if (found == false)
                 lblMessage2.value = "That pet name is not in the database."
             else {
@@ -27,12 +26,12 @@ rbtnDelete.onchange = function() {
                 if (req.status == 200) //transit worked.
                     if (req.responseText == 500)
                         lblMessage2.textContent = `You have successfully deleted the employee named ${userChoice}`
-                else
-                    lblMessage2.textContent = `There was a problem deleting ${userChoice} from the database.`
+                    else
+                        lblMessage2.textContent = `There was a problem deleting ${userChoice} from the database.`
                 else
                     lblMessage2.textContent = `Error: ${req.status}`
             }
-        }
+}
 
 btnDisplay.onclick = function() {
     rbtnDelete.clear()

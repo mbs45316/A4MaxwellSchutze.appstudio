@@ -7,7 +7,6 @@ btnSubmit.onclick=function(){
         lblMessage3.value = 'You are only allowed 5 favorite names.'
     else
         favNames.push(selNames.text)
-    console.log(favNames)
 }
 
 btnDone.onclick=function(){

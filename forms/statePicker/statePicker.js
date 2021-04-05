@@ -14,14 +14,16 @@ drpEmployee.onshow = function() {
             for (i = 0; i < results.length; i++)
                 drpEmployee.addItem(results[i])
         }
-    } else // the transit didn't work - bad wifi? server turned off?
+    } 
+    else // the transit didn't work - bad wifi? server turned off?
         lblMessage1.value = "Error code: " + req.status
 }
 
 drpEmployee.onclick = function(s) {
     if (typeof(s) == "object") {
         return
-    } else {
+    } 
+    else {
         drpEmployee.value = s // make dropdown show choice the user made
         query = `SELECT name FROM customer WHERE state = '${s}'`
         console.log(query)
