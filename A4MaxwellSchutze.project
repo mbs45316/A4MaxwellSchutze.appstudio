@@ -33,6 +33,22 @@
             "employeeDeleter",
             "employeeDeleter.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "babyNames",
+            "babyNames.json"
+          ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "favBabyNames",
+            "favBabyNames.json"
+          ]
         }
       ],
       "configxml": null,
